@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Carmen's Portfolio Home Page</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Personal website homepage that links Carmen's work, services, resume, musings, hobbies, and contact info.">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="./assets/icons/fried-egg.svg" rel="icon">
+        <script>
+            class HelloWorld extends HTMLElement {
+                connectedCallback() {
+                    console.log("Hello World!");
+                }
+            }
+            // Register the custom element
+            customElements.define('hello-world', HelloWorld);
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="top-navbar">
+                <a href="./resume.html">Resume</a>
+                <a href="#contact-methods">Contact</a>
+                <a href="./experiment.html">Experiment</a>
+            </nav>
+            <div class="header-display landing">
+                <hello-world></hello-world>
+                <hgroup>
+                    <h1>Carmen He</h1>
+                    <p>lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </hgroup>
+                <noscript>
+                     <p>Thank you for visiting!</p>
+                </noscript>
+            </div>
+        </header>
+        <main>
+            <a href="./bio.html" title="Go to Biography page">
+                <hgroup>
+                    <h2>Biography</h2>
+                    <p>Meet the person behind the website.</p>
+                </hgroup>
+            </a>
+            <a href="./projects.html" title="Go to Biography page">
+                <hgroup>
+                    <h2>Projects</h2>
+                    <p>Tour some of Carmen's featured work.</p>
+                </hgroup>
+            </a>
+            <a href="./creative.html" title="Go to Creative Corner page">
+                <hgroup>
+                    <h2>Creative Corner</h2>
+                    <p>Ramblings, musings, and other shenanigans.</p>
+                </hgroup>
+            </a>
+        </main>
+        <footer>
+            <div title="Contact options box" id="contact-methods">
+                <h2>Contact Me</h2>
+                <a href="https://www.linkedin.com/in/cahe01/" title="LinkedIn">
+                    <picture class="sm-icon">
+                        <source srcset="./assets/icons/linkedin.svg">
+                        <img class="sm-icon" src="./assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
+                    </picture>
+                </a>
+                <a href="https://www.instagram.com/cloudbirdbrain/" title="Instagram">
+                    <picture class="sm-icon">
+                        <source srcset="./assets/icons/instagram.svg">
+                        <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
+                    </picture>
+                </a>
+                <a href="https://github.com/thecarmechanic" title="Github">
+                    <picture class="sm-icon">
+                        <source srcset="./assets/icons/github.svg">
+                        <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
+                    </picture>
+                </a>
+                <span class="email-ref">cah010@ucsd.edu</span>
+            </div>
+            <form action="mailto:cah010@ucsd.edu" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>&star;Send me a message!&star;</legend>
+                    <label><b>Name: </b></label>
+                    <input type="text"><br>
+                    <label><b>Email: </b></label>
+                    <input type="email" required><br>
+                    <textarea name="user message" rows="10" cols="30" placeholder="Your message..."></textarea><br>
+                    <button type="reset">Clear</button>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </footer>
+    </body>
+</html>

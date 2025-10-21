@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Experimental Page</title>
+        <meta charset="utf-8">
+        <meta name="description" content="One stop document of Carmen's skills and experience.">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="./assets/icons/fried-egg.svg" rel="icon">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="./bio.html">Back to Main Content</a>
+                <a href="#EC">Jump to Extra Credit</a>
+            </nav>
+            <h1>Experiments</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Media Elements</h2>
+                <picture>
+                    <source srcset="./assets/images/cozy.jpeg" media="(width >= 320px)">
+                    <img src="./assets/images/cozy.jpg" width="320" alt="Reading setup by the fireplace with a mug of tea, holiday blankets, and candles.">
+                </picture>
+                <video controls width="320">
+                    <source src="./assets/uploads/nature-autumn.mp4" type="video/mp4">
+                </video>
+                <audio controls>
+                    <source src="./assets/uploads/cinema-sentimental-340530.mp3" type="audio/mpeg">
+                    <p>Audio element is not supported by your browser. Download to listen.
+                        <a href="./assets/uploads/cinema-sentimental-340530.mp3" download="./assets/uploads/cinema-sentimental-340530.mp3"></a>
+                    </p>
+                </audio>
+            </section>
+            <section>
+                <h2>Canvas Drawings</h2>
+                <canvas id="exampleCanvas" width="150" height="150"></canvas>
+                <script>
+                    const canvas = document.getElementById("exampleCanvas");
+                    const ctx = canvas.getContext("2d");
+                    ctx.fillRect(25, 25, 100, 100);
+                    ctx.clearRect(45, 45, 60, 60);
+                    ctx.strokeRect(50, 50, 50, 50);
+                </script>
+            </section>
+            <section>
+                <h2>Making Templates</h2>
+                <p>You see nothing here.</p>
+                <template id="recipe-card">
+                    <article>
+                        <hgroup>
+                            <h2 class="title"></h2>
+                            <p class="flavor-profile"></p>
+                        </hgroup>
+                        <section>
+                            <h3 class="ingredients"></h3>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 class="steps">
+                                <ol>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+                            </h3>
+                        </section>
+                        <section class="recipe-notes">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </section>
+                    </article>
+                </template>
+            </section>
+            <section id="EC">
+                <h2>Extra Credit!</h2>
+                <p>Einstein's equation:
+                    <math display="inline">
+                        <mi>E</mi>
+                        <mo>=</mo>
+                        <mi>m</mi>
+                        <mo></mo>
+                        <msup>
+                            <mi>c</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
