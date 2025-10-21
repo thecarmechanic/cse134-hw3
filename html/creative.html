@@ -10,7 +10,7 @@
     <body>
          <header>
             <nav class="top-navbar">
-                <a href="index.html">
+                <a href="./index.html">
                     <svg class="initials-logo" width="32" height="32"> <!--logo wip-->
                         <text x="0" y="16" font-size="24" fill="black">CH</text>
                     </svg>
@@ -93,19 +93,40 @@
             </article>
         </main>
         <footer>
-            <h2>Contact Me</h2>
             <div title="Contact options box" id="contact-methods">
+                <h2>Contact Me</h2>
                 <a href="https://www.linkedin.com/in/cahe01/" title="LinkedIn">
-                    <img class="sm-icon" src="../assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
+                    <picture class="sm-icon">
+                        <source srcset="../assets/icons/linkedin.svg">
+                        <img class="sm-icon" src="../assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
+                    </picture>
                 </a>
-                <a href="https://github.com/thecarmechanic" title="Instagram">
-                    <img class="sm-icon" src="../assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
+                <a href="https://www.instagram.com/cloudbirdbrain/" title="Instagram">
+                    <picture class="sm-icon">
+                        <source srcset="../assets/icons/instagram.svg">
+                        <img class="sm-icon" src="../assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
+                    </picture>
                 </a>
                 <a href="https://github.com/thecarmechanic" title="Github">
-                    <img class="sm-icon" src="../assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
+                    <picture class="sm-icon">
+                        <source srcset="../assets/icons/github.svg">
+                        <img src="../assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
+                    </picture>
                 </a>
                 <span class="email-ref">cah010@ucsd.edu</span>
             </div>
+            <form action="mailto:cah010@ucsd.edu" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>&star;Send me a message!&star;</legend>
+                    <label><b>Name: </b></label>
+                    <input type="text"><br>
+                    <label><b>Email: </b></label>
+                    <input type="email" required><br>
+                    <textarea name="user message" rows="10" cols="30" placeholder="Your message..."></textarea><br>
+                    <button type="reset">Clear</button>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
         </footer>
     </body>
 </html>
