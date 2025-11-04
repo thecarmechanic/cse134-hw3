@@ -5,69 +5,78 @@
         <meta charset="utf-8">
         <meta name="description" content="All about Carmen, the person behind this site.">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
         <link href="./assets/icons/fried-egg.svg" rel="icon">
+        <link href="./css/main.css" rel="stylesheet">
+        <style>
+
+        </style>
     </head>
     <body>
          <header>
-            <nav class="top-navbar">
+            <brand-components>
                 <a href="./index.html">
-                    <svg class="initials-logo" width="32" height="32"> <!--logo wip-->
-                        <text x="0" y="16" font-size="24" fill="black">CH</text>
-                    </svg>
+                    <img class="logo" src="./assets/icons/portfolio-logo.svg" alt="Egg in frying pan icon">
+                    <h1 style="display:inline;">The Portfolio</h1>
                 </a>
-                <a href="./bio.html">Bio</a>
+            </brand-components>
+            <nav class="topnav">
+                <a href="./bio.html">Biography</a>
                 <a href="./projects.html">Projects</a>
-                <a href="./creative.html">Creative Corner</a>
+                <a href="./creative.html">Blog</a>
                 <a href="#contact-methods">Contact</a>
-                <a href="./experiment.html">Experiment</a>
             </nav>
         </header>
         <main>
-            <picture>
-                <source srcset="./assets/images/profile.jpg" media="(height >= 480px)">
-                <img src="./assets/images/profile.jpg" height="480" alt="Portrait photo of Carmen at Windemere Lake, UK">
-            </picture>
             <article>
-                <h1>Biography</h1>
-                <section>
-                    <h2>Background & Education</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                </section>
-                <section>
-                    <h2>Progessional Journey</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                </section>
-                <section>
-                    <h2>Where I am Now</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos</p>
-                </section>
-                <a href="./resume.html">Resume</a>
-                <a href="./index.html#contact-methods">Contact</a>
+                <picture class="titleImgmg">
+                    <source srcset="./assets/images/carmen2-desktop.jpg 630w, ./assets/images/carmen2-mobile.png 380w"
+                        sizes="(width > 380px) 630px, 380px "
+                        src="./assets/images/carmen2-cropped.jpg"
+                        alt="Portrait photo of Carmen at Windemere Lake, UK">
+                </picture>
+                <hgroup>
+                    <h2>On Dreams and Multitudes</h2>
+                    <p class="subtitle"> An interview with Carmen He</p>
+                </hgroup>
+                <p class="question">
+                    <em>Q:</em> Hi Carmen! To start, could you introduce yourself and your educational background?</p>
+                <p class="answer" id="education">
+                    <em>A:</em> I hail from Campbell, CA, but I'm currently studying Cognitive Science, an interdisciplinary major that combines machine learning, philosophy, and neuroscience in a holistic study of how humans interact with the world around them, and Computer Science at the University of California,
+                    San Diego. I've been curious about technology since high school: I participated in FIRST Robotics and absolutely loved it. In college I started learning web development, and machine learning, and here we are now. My education definitely informs the way I approach not just technology, but working 
+                    with people too. I'm a huge advocate of interdisciplinary learning -- the best ideas are cross pollinated across different fields, subjects, and philosophies -- and prioritize accessibility and user-forward development.
+                </p>
+                <p class="question">
+                    <em>Q:</em> Tell me more about your interest in technology. What are some things you have built?
+                </p>
+                <p class="answer" id="experience">
+                    <em>A:</em> This website is the second multi-page site I have designed and built from end to end by myself, and the one I'm most proud of. In the design and development process, I really tried to focus on accessibility and 
+                    performance. Another project that I'm really proud of is an LLM benchmarking experiment I ran out of interest. With my co-author, I meticulously designed and conducted a series of "social experiments" on the metaphor generation 
+                    capabilities of popular LLM models to assess their "creativity". It was a really fun bridge between my experiences with LLMs, social science research, and creative writing, and I feel that it is especially relevant now, with the 
+                    discourse surrounding the use of Generative AI with creative tasks. You can find more of my projects <a href="./projects.html" style="color:var(--default-link-color);">here</a>.
+                </p>
+                <p class="question">
+                    <em>Q:</em> Where do you see yourself in 5 years?
+                </p>
+                <p class="answer" id="future">
+                    <em>A:</em> I have a big milestone coming up this year: first I will be graduating college. In my professional life after, I hope to build accessible, high-performing sites for important causes.
+                </p>
+                <a href="./assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </article>
         </main>
         <footer>
-            <div title="Contact options box" id="contact-methods">
-                <h2>Contact Me</h2>
+            <div id="email">carmen.he0908@gmail.com</div>
+            <nav title="Contact options box" id="contact-methods">
                 <a href="https://www.linkedin.com/in/cahe01/" title="LinkedIn">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/linkedin.svg">
-                        <img class="sm-icon" src="./assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
-                    </picture>
+                    <img class="sm-icon" src="./assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
                 </a>
                 <a href="https://www.instagram.com/cloudbirdbrain/" title="Instagram">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/instagram.svg">
-                        <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
-                    </picture>
+                    <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
                 </a>
                 <a href="https://github.com/thecarmechanic" title="Github">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/github.svg">
-                        <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
-                    </picture>
+                    <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
                 </a>
-                <span class="email-ref">cah010@ucsd.edu</span>
-            </div>
+            </nav>
         </footer>
     </body>
 </html>

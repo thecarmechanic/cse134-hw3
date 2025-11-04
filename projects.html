@@ -6,8 +6,8 @@
         <meta name="description" content="Featured projects that Carmen has made in web development, design, and ml research projects.">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-        <script></script>
         <link href="./assets/icons/fried-egg.svg" rel="icon">
+        <link href="./css/main.css" rel="stylesheet" media="screen">
         <style>
             demo-card {
                 border: 1px solid black;
@@ -19,17 +19,17 @@
     </head>
     <body>
          <header>
-            <nav class="top-navbar">
-                <a href="index.html">
-                    <svg class="initials-logo" width="32" height="32"> <!--logo wip-->
-                        <text x="0" y="16" font-size="24" fill="black">CH</text>
-                    </svg>
+            <brand-components>
+                <a href="./index.html">
+                    <img class="logo" src="./assets/icons/portfolio-logo.svg" alt="Egg in frying pan icon">
+                    <h1 style="display:inline;">The Portfolio</h1>
                 </a>
-                <a href="./bio.html">Bio</a>
+            </brand-components>
+            <nav class="topnav">
+                <a href="./bio.html">Biography</a>
                 <a href="./projects.html">Projects</a>
-                <a href="./creative.html">Creative Corner</a>
+                <a href="./creative.html">Blog</a>
                 <a href="#contact-methods">Contact</a>
-                <a href="./experiment.html">Experiment</a>
             </nav>
             <div class="header-display">
                 <hgroup>
@@ -61,28 +61,18 @@
             </article>
         </main>
         <footer>
-            <div title="Contact options box" id="contact-methods">
-                <h2>Contact Me</h2>
+            <div id="email">carmen.he0908@gmail.com</div>
+            <nav title="Contact options box" id="contact-methods">
                 <a href="https://www.linkedin.com/in/cahe01/" title="LinkedIn">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/linkedin.svg">
-                        <img class="sm-icon" src="./assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
-                    </picture>
+                    <img class="sm-icon" src="./assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
                 </a>
                 <a href="https://www.instagram.com/cloudbirdbrain/" title="Instagram">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/instagram.svg">
-                        <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
-                    </picture>
+                    <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
                 </a>
                 <a href="https://github.com/thecarmechanic" title="Github">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/github.svg">
-                        <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
-                    </picture>
+                    <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
                 </a>
-                <span class="email-ref">cah010@ucsd.edu</span>
-            </div>
+            </nav>
         </footer>
     </body>
 </html>

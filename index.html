@@ -6,90 +6,190 @@
         <meta charset="utf-8">
         <meta name="description" content="Personal website homepage that links Carmen's work, services, resume, musings, hobbies, and contact info.">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
         <link href="./assets/icons/fried-egg.svg" rel="icon">
-        <script>
-            class HelloWorld extends HTMLElement {
-                connectedCallback() {
-                    console.log("Hello World!");
+        <link href="./css/main.css" rel="stylesheet">
+        <!--load fonts -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,400..700;1,400..700&family=Cutive+Mono&display=swap" rel="stylesheet"> -->
+        <link rel="preload" href="./assets/fonts/rubik.woff2" as="font" crossorigin>
+        <link rel="preload" href="./assets/fonts/cormorant.woff2" as="font" crossorigin>
+        <link rel="preload" href="./assets/fonts/cutive-mono.woff2" as="font" crossorigin>
+        <style>
+
+            page-preview {
+                padding: 1rem;
+                display: block;
+                border-bottom: 0.5px solid var(--default-border-color, black);
+                transition: background-color 0.2s 0.2s;
+                box-sizing: border-box;
+            }
+
+            page-preview:hover {
+                background-color: var(--default-emph-color, lightgray);
+            }
+
+            .seeMore {
+                font-family: var(--default-script-font, monospace);
+                font-size: 0.75rem; /* limit caption size */
+                text-decoration: underline;
+            }
+
+            @media (min-width:480px) {
+                body main {
+                    display: grid;
+                    grid-template-areas:
+                        "central side"
+                        "central side";
+                    gap: 0 1rem;
+                    overflow: scroll;
+                }
+                .centralContent {
+                    min-width: 25rem;
+                    border-right: 0.5px solid black;
+                    grid-area: central;
+                }
+                
+                .sideContent {
+                    max-width: 50vw;
+                    min-width: 20rem;
+                }
+                
+            }
+            @media (max-width:480px) {
+                body main {
+                    display: grid;
+                    grid-template-areas:
+                        "central"
+                        "side";
+                    gap: 1rem;
+                }
+
+                page-preview {
+                    width: 100vw;
+                    border-top: 0.5px solid var(--default-border-color, black);
+                    background-color: var(--default-topnav-color, white);
+                    margin: 0;
+                }
+
+                .sideContent > h2,
+                .sideContent .seeMore {
+                    margin-left: 1rem;
                 }
             }
-            // Register the custom element
-            customElements.define('hello-world', HelloWorld);
+        </style>
+        <script>
+            console.log("Hello fellow developer! Curious about my site, aren't ya? Find the full code here: https://github.com/thecarmechanic/cse134-hw3.");
         </script>
     </head>
     <body>
         <header>
-            <nav class="top-navbar">
-                <a href="./resume.html">Resume</a>
+            <brand-components>
+                <a href="./index.html">
+                    <img class="logo" src="./assets/icons/portfolio-logo.svg" alt="Egg in frying pan icon">
+                    <h1 style="display:inline;">The Portfolio</h1>
+                </a>
+            </brand-components>
+            <nav class="topnav">
+                <a href="./bio.html">Biography</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./creative.html">Blog</a>
                 <a href="#contact-methods">Contact</a>
-                <a href="./experiment.html">Experiment</a>
             </nav>
-            <div class="header-display landing">
-                <hello-world></hello-world>
-                <hgroup>
-                    <h1>Carmen He</h1>
-                    <p>lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                </hgroup>
-                <noscript>
-                     <p>Thank you for visiting!</p>
-                </noscript>
-            </div>
         </header>
         <main>
-            <a href="./bio.html" title="Go to Biography page">
-                <hgroup>
-                    <h2>Biography</h2>
-                    <p>Meet the person behind the website.</p>
+            <section id="featured" class="centralContent">
+                <hgroup style="margin-left: 1rem;">
+                    <h2 class="title">FEATURED STORIES</h2>
+                    <p title="Page description">All about the lead developer, designer, and founder of <em>The Portfolio</em>.</p>
                 </hgroup>
-            </a>
-            <a href="./projects.html" title="Go to Biography page">
-                <hgroup>
-                    <h2>Projects</h2>
-                    <p>Tour some of Carmen's featured work.</p>
-                </hgroup>
-            </a>
-            <a href="./creative.html" title="Go to Creative Corner page">
-                <hgroup>
-                    <h2>Creative Corner</h2>
-                    <p>Ramblings, musings, and other shenanigans.</p>
-                </hgroup>
-            </a>
+                <page-preview>
+                    <a href="./bio.html" title="To Biography page">
+                        <figure>
+                            <img src="./assets/images/carmen1.JPG" alt="Noir photograph of Carmen He at a desk">
+                            <figcaption>Carmen He for The Portfolio</figcaption>
+                        </figure>
+                        <hgroup class="article-title">
+                            <h3>Interview: On Dreams and Multitudes</h3>
+                            <p>An exclusive interview with Carmen He on her professional journey, web development, side quests, and dreams.</p>
+                            <p class="author">Carmen He</p>  
+                        </hgroup>
+                    </a>
+                </page-preview>
+                <page-preview>
+                    <a href="./assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" title="To Resume">
+                        <figure>
+                            <img src="./assets/images/" alt="Cartoon of a briefcase">
+                            <figcaption>Credit:</figcaption>
+                        </figure>
+                        <hgroup class="article-title">
+                            <h3>What's In Carmen's Resume?</h3>
+                            <p>View the editor's job application essentials. Print this page for a ready-to-download copy.</p>
+                            <p class="author">Carmen He</p>  
+                        </hgroup>
+                    </a>
+                </page-preview>
+            </section>
+            <section id="news" class="sideContent">
+                <h2>WORK</h2>
+                <page-preview>
+                    <figure>
+                        <img src="./assets/images/IBM-cropped-compressed.jpg" alt="Photograph of Carmen at a tech competition">
+                        <figcaption>Summer 2025: IBM WatsonX Challenge Kickoff at San Jose, CA</figcaption>
+                    </figure>
+                    <a href="./projects.html" title="Go to Projects page">
+                        <hgroup>
+                            <h3>Projects</h3>
+                            <p>Tour the gallery of Carmen's featured work.</p>
+                        </hgroup>
+                    </a>
+                </page-preview>
+            </section>
+            <section id="sidequest" class="sideContent">
+                <h2>SIDE QUESTS</h2>
+                <page-preview>
+                    <a href="./creative.html#sourdough" title="To side quests">
+                        <figure>
+                            <img src="./assets/images/bread-3484107_640.jpg" alt="Photograph of a cross section of artisan bread ">
+                            <figcaption>Credit: Pixbay</figcaption>
+                        </figure>
+                        <hgroup class="article-title">
+                            <h3>I Started Making Sourdough</h3>
+                            <p>Wild yeast is hardy and ubiquitous, and other things I've learned.</p>
+                            <p class="author">Carmen He</p>  
+                        </hgroup>
+                    </a>
+                </page-preview>
+                <page-preview>
+                    <a href="./creative.html#writing" title="To side quests">
+                        <figure>
+                            <img src="./assets/images/notebook-1840276_640.jpg" alt="Cartoon drawing of a fountain pen and inkwell">
+                            <figcaption>Credit: Pixbay</figcaption>
+                        </figure>
+                        <hgroup class="article-title">
+                            <h3>Words From A Younger Me</h3>
+                            <p>In which I share a poem I wrote when I was 16 and muse on preserving personal writing.</p>
+                            <p class="author">Carmen He</p>  
+                        </hgroup>
+                    </a>
+                </page-preview>
+                <a href="./creative.html" class="seeMore" style="display:block; margin-top: 1rem; margin-bottom: 1rem;">see all &rightarrow;</a>
+            </section>
         </main>
         <footer>
-            <div title="Contact options box" id="contact-methods">
-                <h2>Contact Me</h2>
+            <div id="email">carmen.he0908@gmail.com</div>
+            <nav title="Contact options box" id="contact-methods">
                 <a href="https://www.linkedin.com/in/cahe01/" title="LinkedIn">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/linkedin.svg">
-                        <img class="sm-icon" src="./assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
-                    </picture>
+                    <img class="sm-icon" src="./assets/icons/linkedin.svg" height="16" width="16" alt="Linked Logo Icon">
                 </a>
                 <a href="https://www.instagram.com/cloudbirdbrain/" title="Instagram">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/instagram.svg">
-                        <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
-                    </picture>
+                    <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
                 </a>
                 <a href="https://github.com/thecarmechanic" title="Github">
-                    <picture class="sm-icon">
-                        <source srcset="./assets/icons/github.svg">
-                        <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
-                    </picture>
+                    <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
                 </a>
-                <span class="email-ref">cah010@ucsd.edu</span>
-            </div>
-            <form action="mailto:cah010@ucsd.edu" method="post" enctype="multipart/form-data">
-                <fieldset>
-                    <legend>&star;Send me a message!&star;</legend>
-                    <label><b>Name: </b></label>
-                    <input type="text"><br>
-                    <label><b>Email: </b></label>
-                    <input type="email" required><br>
-                    <textarea name="user message" rows="10" cols="30" placeholder="Your message..."></textarea><br>
-                    <button type="reset">Clear</button>
-                    <button type="submit">Submit</button>
-                </fieldset>
-            </form>
+            </nav>
         </footer>
     </body>
 </html>
