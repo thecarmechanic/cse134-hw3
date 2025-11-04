@@ -127,3 +127,7 @@ main .author, .subtitle {
     }
 
 }
+
+.delay-reder { /* apply this class to images as site gets more complex*/
+    content-visibility: auto;
+}
