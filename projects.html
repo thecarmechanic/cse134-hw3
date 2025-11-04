@@ -27,38 +27,42 @@
             </brand-components>
             <nav class="topnav">
                 <a href="./bio.html">Biography</a>
-                <a href="./projects.html">Projects</a>
-                <a href="./creative.html">Blog</a>
+                <a href="./projects.html" style="background-color: var(--default-emph-color);">Projects</a>
                 <a href="#contact-methods">Contact</a>
             </nav>
-            <div class="header-display">
-                <hgroup>
-                    <h1>Projects</h1>
-                    <p>lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                </hgroup>
-            </div>
         </header>
         <main>
-            <article title="project content">
+            <section title="Technical Projects">
+                <a href=""></a>
                 <hgroup>
                     <h2>Technical Projects</h2>
                     <p>Web app proceses and more fun stuff.</p>
                 </hgroup>
-                <demo-card content="webpage">
+                <project-card>
                     <h3>Photo Gallery</h3>
+                    <a href="https://thecarmechanic.github.io/photo-gallery/" class="img-link">
+                    </a>
                     <p>A practice in design and vanilla html + css layout. Proof you don't need javascript and flexbox to make things pretty!</p>
-                </demo-card>
-                
+                </project-card>
+            </section>
+            <section title="Creative Side Projects" id="side-projects">
                 <hgroup>
-                    <h2>Research Projects</h2>
-                    <p>The pursuit of knowledge, from AI to the social sciences</p>
+                    <h2>Side Projects</h2>
+                    <p>When I relax, mess around, and have fun.</p>
                 </hgroup>
-                <demo-card content="paper">
-                    <h3>LLM Metaphor Generation</h3>
-                    <iframe height="480" width="360" src="./assets/uploads/models.pdf"></iframe>
-                    <p>Assessment of how "creative" popular private LLMs are.</p>
-                </demo-card> 
-            </article>
+                <project-card>
+                    <h3>Sourdough Diaries</h3>
+                    <a href="./assets/documents/sourdough-log.pdf" class="img-link" target="_blank" rel="noopener noreferrer">
+                    </a>
+                    <p>A practice in design and vanilla html + css layout. Proof you don't need javascript and flexbox to make things pretty!</p>
+                </project-card>
+                 <project-card>
+                    <h3>Creative Writing</h3>
+                    <a href="./assets/documents/sourdough-log.pdf" class="img-link" target="_blank" rel="noopener noreferrer">
+                    </a>
+                    <p>A practice in design and vanilla html + css layout. Proof you don't need javascript and flexbox to make things pretty!</p>
+                </project-card>
+            </section>
         </main>
         <footer>
             <div id="email">carmen.he0908@gmail.com</div>
@@ -70,7 +74,7 @@
                     <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
                 </a>
                 <a href="https://github.com/thecarmechanic" title="Github">
-                    <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
+                    <img class="sm-icon" src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
                 </a>
             </nav>
         </footer>

@@ -9,7 +9,37 @@
         <link href="./assets/icons/fried-egg.svg" rel="icon">
         <link href="./css/main.css" rel="stylesheet">
         <style>
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+            }
 
+            hgroup {
+                padding: 1rem;
+                background-color: rgba(255, 255, 255, 0.6);
+                text-align: center;
+            }
+
+            .question {
+                width: 100%;
+
+            }
+
+            .titleImg {
+                width: 100%;
+                height: 20vh;
+            }
+
+            .titleImg > img {
+                object-fit: contain;
+            }
+
+            #resume-link {
+                background-color: var(--default-emph-color, gray);
+                padding: 0.5rem;
+            }
         </style>
     </head>
     <body>
@@ -21,20 +51,19 @@
                 </a>
             </brand-components>
             <nav class="topnav">
-                <a href="./bio.html">Biography</a>
+                <a href="./bio.html" style="background-color: var(--default-emph-color);">Biography</a>
                 <a href="./projects.html">Projects</a>
-                <a href="./creative.html">Blog</a>
                 <a href="#contact-methods">Contact</a>
             </nav>
         </header>
         <main>
+            <picture class="titleImg">
+                <source media="(width<=380px)" srcset="./assets/images/carmen2-mobile.png">
+                <source media="(width<=630px)" srcset="./assets/images/carmen2-desktop.png">
+                <source media="(width>630px)" srcset="./assets/images/carmen2-cropped.jpg">
+                <img src="./assets/images/carmen2-cropped.jpg" alt="Portrait photo of Carmen at Windemere Lake, UK">
+            </picture>
             <article>
-                <picture class="titleImgmg">
-                    <source srcset="./assets/images/carmen2-desktop.jpg 630w, ./assets/images/carmen2-mobile.png 380w"
-                        sizes="(width > 380px) 630px, 380px "
-                        src="./assets/images/carmen2-cropped.jpg"
-                        alt="Portrait photo of Carmen at Windemere Lake, UK">
-                </picture>
                 <hgroup>
                     <h2>On Dreams and Multitudes</h2>
                     <p class="subtitle"> An interview with Carmen He</p>
@@ -61,7 +90,7 @@
                 <p class="answer" id="future">
                     <em>A:</em> I have a big milestone coming up this year: first I will be graduating college. In my professional life after, I hope to build accessible, high-performing sites for important causes.
                 </p>
-                <a href="./assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a id="resume-link" href="./assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </article>
         </main>
         <footer>
@@ -74,7 +103,7 @@
                     <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
                 </a>
                 <a href="https://github.com/thecarmechanic" title="Github">
-                    <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
+                    <img class="sm-icon" src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
                 </a>
             </nav>
         </footer>

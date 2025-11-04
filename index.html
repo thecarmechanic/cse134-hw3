@@ -17,7 +17,6 @@
         <link rel="preload" href="./assets/fonts/cormorant.woff2" as="font" crossorigin>
         <link rel="preload" href="./assets/fonts/cutive-mono.woff2" as="font" crossorigin>
         <style>
-
             page-preview {
                 padding: 1rem;
                 display: block;
@@ -30,7 +29,7 @@
                 background-color: var(--default-emph-color, lightgray);
             }
 
-            .seeMore {
+            .see-more {
                 font-family: var(--default-script-font, monospace);
                 font-size: 0.75rem; /* limit caption size */
                 text-decoration: underline;
@@ -45,13 +44,13 @@
                     gap: 0 1rem;
                     overflow: scroll;
                 }
-                .centralContent {
+                .central-content {
                     min-width: 25rem;
                     border-right: 0.5px solid black;
                     grid-area: central;
                 }
                 
-                .sideContent {
+                .side-content {
                     max-width: 50vw;
                     min-width: 20rem;
                 }
@@ -73,8 +72,8 @@
                     margin: 0;
                 }
 
-                .sideContent > h2,
-                .sideContent .seeMore {
+                .side-content > h2,
+                .side-content .see-more {
                     margin-left: 1rem;
                 }
             }
@@ -94,7 +93,6 @@
             <nav class="topnav">
                 <a href="./bio.html">Biography</a>
                 <a href="./projects.html">Projects</a>
-                <a href="./creative.html">Blog</a>
                 <a href="#contact-methods">Contact</a>
             </nav>
         </header>
@@ -107,7 +105,11 @@
                 <page-preview>
                     <a href="./bio.html" title="To Biography page">
                         <figure>
-                            <img src="./assets/images/carmen1.JPG" alt="Noir photograph of Carmen He at a desk">
+                            <picture>
+                                <source media="(width<=480px)" srcset="./assets/images/carmen1-mobile.png">
+                                <source media="(width>480px)" srcset="./assets/images/carmen1-desktop.png">
+                                <img src="./assets/images/carmen1-desktop.png" alt="Photograph of Carmen He in front of a bookshelf.">
+                            </picture>
                             <figcaption>Carmen He for The Portfolio</figcaption>
                         </figure>
                         <hgroup class="article-title">
@@ -119,13 +121,9 @@
                 </page-preview>
                 <page-preview>
                     <a href="./assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" title="To Resume">
-                        <figure>
-                            <img src="./assets/images/" alt="Cartoon of a briefcase">
-                            <figcaption>Credit:</figcaption>
-                        </figure>
                         <hgroup class="article-title">
                             <h3>What's In Carmen's Resume?</h3>
-                            <p>View the editor's job application essentials. Print this page for a ready-to-download copy.</p>
+                            <p>View the editor's job application essentials. Visit this page for a ready-to-download copy.</p>
                             <p class="author">Carmen He</p>  
                         </hgroup>
                     </a>
@@ -135,6 +133,7 @@
                 <h2>WORK</h2>
                 <page-preview>
                     <figure>
+                        
                         <img src="./assets/images/IBM-cropped-compressed.jpg" alt="Photograph of Carmen at a tech competition">
                         <figcaption>Summer 2025: IBM WatsonX Challenge Kickoff at San Jose, CA</figcaption>
                     </figure>
@@ -149,9 +148,13 @@
             <section id="sidequest" class="sideContent">
                 <h2>SIDE QUESTS</h2>
                 <page-preview>
-                    <a href="./creative.html#sourdough" title="To side quests">
+                    <a href="./projects.html#side-quests" title="To side quests">
                         <figure>
-                            <img src="./assets/images/bread-3484107_640.jpg" alt="Photograph of a cross section of artisan bread ">
+                            <picture>
+                                <source media="(width<=480px)" srcset="./assets/images/bread-mobile.png">
+                                <source media="(width>480px)" srcset="./assets/images/bread-desktop.png">
+                                <img src="./assets/images/bread-desktop.png" alt="Photograph of a cross section of artisan bread ">
+                            </picture>
                             <figcaption>Credit: Pixbay</figcaption>
                         </figure>
                         <hgroup class="article-title">
@@ -162,9 +165,13 @@
                     </a>
                 </page-preview>
                 <page-preview>
-                    <a href="./creative.html#writing" title="To side quests">
+                    <a href="./projects.html#side-quests" title="To side quests">
                         <figure>
-                            <img src="./assets/images/notebook-1840276_640.jpg" alt="Cartoon drawing of a fountain pen and inkwell">
+                            <picture>
+                                <source media="(width<=480px)" srcset="./assets/images/notebook-mobile.png">
+                                <source media="(width>480px)" srcset="./assets/images/notebook-desktop.webp">
+                                <img src="./assets/images/notebook-desktop.webp" alt="Cartoon drawing of a fountain pen and inkwell">
+                            </
                             <figcaption>Credit: Pixbay</figcaption>
                         </figure>
                         <hgroup class="article-title">
@@ -174,7 +181,7 @@
                         </hgroup>
                     </a>
                 </page-preview>
-                <a href="./creative.html" class="seeMore" style="display:block; margin-top: 1rem; margin-bottom: 1rem;">see all &rightarrow;</a>
+                <a href="./projects.html" class="seeMore" style="display:block; margin-top: 1rem; margin-bottom: 1rem;">see all &rightarrow;</a>
             </section>
         </main>
         <footer>
@@ -187,7 +194,7 @@
                     <img class="sm-icon" src="./assets/icons/instagram.svg" height="16" width="16" alt="Instagram Logo Icon">
                 </a>
                 <a href="https://github.com/thecarmechanic" title="Github">
-                    <img src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
+                    <img class="sm-icon" src="./assets/icons/github.svg" height="16" width="16" alt="Github Logo Icon">
                 </a>
             </nav>
         </footer>

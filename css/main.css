@@ -1,0 +1,129 @@
+@import "var.css";
+
+/* || GENERAL STYLES */
+body {
+    background-color: var(--default-bg-color);
+    color: var(--default-font-color);
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+    background-color: var(--default-footer-bg-color);
+    color: var(--default-footer-color);
+    padding: 1vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    font-family: var(--default-body-font, sans-serif);
+}
+
+h1, h2, h3 {
+    font-family: var(--default-header-font, Times, serif);
+    font-weight: 700;
+    margin: 0.5rem auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p, label, legend {
+    font-family: var(--default-body-font, sans-serif);
+    font-weight: 400;
+    margin: 0.5rem auto;
+}
+
+a[href] {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s 0.2s;
+}
+
+a[href]:hover, a[href]:active {
+    color: var(--default-link-color);
+}
+
+figure {
+    font-family: var(--default-script-font, monospace);
+    font-size: 0.75rem; /* limit caption size */
+}
+
+article {
+    box-sizing: border-box;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+/* || SHARED STYLES */
+header {
+    border-bottom: 1px solid var(--default-border-color, black);
+    padding: 1vmin;
+    background-color: var(--top-nav-bg-color, white);
+    margin-bottom: 2vmin;
+}
+
+header .site-logo {
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+
+header .topnav {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+main .author, .subtitle {
+    font-family: var(--default-script-font, monospace);
+}
+
+#contact-methods {
+    display: flex;
+    gap: 1rem;
+}
+
+#contact-methods > a[href] {
+    transition: background-color 0.2s 0.2s;
+    touch-action: auto;
+}
+
+#contact-methods .sm-icon:hover,
+#contact-methods .sm-icon:active {
+    background-color: var(--default-emph-color, gray);
+}
+
+/* || RESPONSIVE LAYOUT */
+@media (min-width:768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (max-width:768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
